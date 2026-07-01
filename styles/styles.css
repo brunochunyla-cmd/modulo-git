@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'roboto', sans-serif;
+}
+body{
+    display: flex;
+    background-color: #c7cace;
+    justify-content: space-between;
+    gap: 10px;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*----------------HEADER----------------*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2D3748;
+    padding: 1rem;
+    gap: 10px;
+}
+
+.inicio {
+    text-decoration: none;
+    color: #14B8A6;
+    font-size: 2rem;
+}
+
+.subtitulo-header {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #14B8A6;
+    padding: 10px;
+    justify-content: center;
+}
+nav ul li{
+    background-color: #2e798e;
+    border:#000000 1px solid;
+    border-radius: 10px;
+}
+
+.nave {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    font-size: 2rem;
+    color: #14B8A6;
+    font-weight: 500;
+    list-style: none;
+    flex-direction:row;
+}
+
+/*----------------MAIN----------------*/
+
+main{
+    display: grid;
+    grid-template-areas:
+        "preguntas"
+        "objetivo";
+    gap: 20px;
+    padding: 20px;
+}
+.seccion-preguntas{
+    grid-area: preguntas;
+}
+.seccion-objetivo{
+    grid-area: objetivo;
+}
+.seccion-preguntas article,
+.seccion-proyectos article,
+.seccion-servicios article,
+.seccion-sobre-mi article,
+.seccion-objetivo article{
+    background-color: #d4e6e9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.247);
+}
+.seccion-objetivo{
+    grid-area: objetivo;
+}
+.seccion-preguntas{
+    grid-area: preguntas;
+}
+.seccion-proyectos{
+    grid-area: proyectos;
+}
+.seccion-servicios{
+    grid-area: servicios;
+}
+.seccion-sobre-mi{
+    grid-area: 
+    "sobre-mi";
+}
+section{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.bienvenida{
+    font-size: 2rem;
+    color:#2e798e;
+}
+.pregunta{
+    font-size: 1.3rem;
+    color: #30405c;
+}
+.respuesta{
+    padding: 20px;
+}
+.objetivo{
+    font-size: 1.5rem;
+    color: #2e798e;
+}
+.pie-foto{
+    color: #2e798e;
+    font-size: 1.3rem;
+}
+
+.p-actualidad{
+    margin-top: 5px;
+    font-size: 18px;
+}
+/*----------------FOOTER----------------*/
+footer{
+    display: flex;
+    background-color: #2D3748;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+.nave-footer{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;   
+}
+.nave-footer img{
+    width: 50px;
+    height: 50px;
+}
+/*----------------MAIN DE CONTACTO----------------*/
+.formu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.contact {
+    font-size: 2rem;
+    color: #2e798e;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #30405c;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 100%;
+}
+.links{
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    list-style: none;
+}
+.links img{
+    width: 100px;
+    height: 100px;
+}
+section button{
+    background-color: #30405c;
+    height: 50px;
+    color: #c7cace;
+    border-radius: 10px;
+}
+/*----------------MEDIA QUERIES PARA TABLETS----------------*/
+@media (min-width: 768px) {
+    main {
+        grid-template-areas:
+            "preguntas"
+            "objetivo";
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.2rem;
+    }
+
+    .inicio {
+        font-size: 2.5rem;
+    }
+}
+/*----------------MEDIA QUERIES PARA DESKTOP----------------*/
+@media (min-width: 1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5rem;
+        gap: 25px;
+    }
+    .inicio {
+        font-size: 3rem;
+    }
+    form {
+        width: 400px;
+    }
+    main{
+        grid-template-areas:
+        "preguntas objetivo";
+        grid-template-columns: 1fr 1fr;
+    }
+    .seccion-sobre-mi{
+        grid-template-areas:
+        "sobre-mi sobre-mi";
+        grid-template-columns: 1fr 1fr;
+    }
+    .seccion-proyectos{
+        grid-template-areas:
+        "proyectos proyectos";
+        grid-template-columns: 1fr 1fr;
+    }
+    .seccion-servicios{
+        grid-template-areas:
+        "servicios servicios";
+        grid-template-columns: 1fr 1fr;
+    }
+}
