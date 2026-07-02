@@ -9,7 +9,8 @@
 html {
     font-family: 'roboto', sans-serif;
 }
-body{
+
+body {
     display: flex;
     background-color: #c7cace;
     justify-content: space-between;
@@ -38,6 +39,7 @@ header {
     font-size: 1.5rem;
     font-weight: 400;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -50,9 +52,10 @@ ul li a {
     padding: 10px;
     justify-content: center;
 }
-nav ul li{
+
+nav ul li {
     background-color: #2e798e;
-    border:#000000 1px solid;
+    border: #000000 1px solid;
     border-radius: 10px;
 }
 
@@ -64,12 +67,12 @@ nav ul li{
     color: #14B8A6;
     font-weight: 500;
     list-style: none;
-    flex-direction:row;
+    flex-direction: column;
 }
 
 /*----------------MAIN----------------*/
 
-main{
+main {
     display: grid;
     grid-template-areas:
         "preguntas"
@@ -77,84 +80,107 @@ main{
     gap: 20px;
     padding: 20px;
 }
-.seccion-preguntas{
+
+.seccion-preguntas {
     grid-area: preguntas;
 }
-.seccion-objetivo{
+
+.seccion-objetivo {
     grid-area: objetivo;
 }
+
 .seccion-preguntas article,
 .seccion-proyectos article,
 .seccion-servicios article,
 .seccion-sobre-mi article,
-.seccion-objetivo article{
+.seccion-objetivo article {
     background-color: #d4e6e9;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.247);
 }
-.seccion-objetivo{
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.seccion-objetivo {
     grid-area: objetivo;
 }
-.seccion-preguntas{
+
+.seccion-preguntas {
     grid-area: preguntas;
 }
-.seccion-proyectos{
+
+.seccion-proyectos {
     grid-area: proyectos;
 }
-.seccion-servicios{
+
+.seccion-servicios {
     grid-area: servicios;
 }
-.seccion-sobre-mi{
-    grid-area: 
-    "sobre-mi";
+
+.seccion-sobre-mi {
+    grid-area:
+        "sobre-mi";
 }
-section{
+
+section {
     display: flex;
     gap: 20px;
     flex-direction: column;
 }
-.bienvenida{
+
+.bienvenida {
     font-size: 2rem;
-    color:#2e798e;
+    color: #2e798e;
 }
-.pregunta{
+
+.pregunta {
     font-size: 1.3rem;
     color: #30405c;
 }
-.respuesta{
+
+.respuesta {
     padding: 20px;
 }
-.objetivo{
+
+.objetivo {
     font-size: 1.5rem;
     color: #2e798e;
 }
-.pie-foto{
+
+.pie-foto {
     color: #2e798e;
     font-size: 1.3rem;
 }
 
-.p-actualidad{
+.p-actualidad {
     margin-top: 5px;
     font-size: 18px;
 }
+
 /*----------------FOOTER----------------*/
-footer{
+footer {
     display: flex;
     background-color: #2D3748;
     align-items: center;
     justify-content: space-between;
     padding: 25px;
 }
-.nave-footer{
+
+.nave-footer {
     display: flex;
     justify-content: space-between;
-    list-style: none;   
+    list-style: none;
 }
-.nave-footer img{
+
+.nave-footer img {
     width: 50px;
     height: 50px;
 }
+
 /*----------------MAIN DE CONTACTO----------------*/
 .formu {
     display: flex;
@@ -178,7 +204,8 @@ form {
     font-weight: 500;
     width: 100%;
 }
-.links{
+
+.links {
     display: flex;
     font-size: 1.5rem;
     justify-content: center;
@@ -186,16 +213,19 @@ form {
     padding: 20px;
     list-style: none;
 }
-.links img{
+
+.links img {
     width: 100px;
     height: 100px;
 }
-section button{
+
+section button {
     background-color: #30405c;
     height: 50px;
     color: #c7cace;
     border-radius: 10px;
 }
+
 /*----------------MEDIA QUERIES PARA TABLETS----------------*/
 @media (min-width: 768px) {
     main {
@@ -216,38 +246,51 @@ section button{
         font-size: 2.5rem;
     }
 }
+
 /*----------------MEDIA QUERIES PARA DESKTOP----------------*/
 @media (min-width: 1024px) {
     header {
+        width: 100%;
         flex-direction: row;
         justify-content: space-between;
         padding: 1.5rem;
         gap: 25px;
     }
+
     .inicio {
         font-size: 3rem;
     }
+
+    .nave {
+        flex-direction: row;
+        gap: 30px;
+    }
+
     form {
         width: 400px;
     }
-    main{
+
+    main {
         grid-template-areas:
-        "preguntas objetivo";
+            "preguntas objetivo";
         grid-template-columns: 1fr 1fr;
     }
-    .seccion-sobre-mi{
+
+    .seccion-sobre-mi {
         grid-template-areas:
-        "sobre-mi sobre-mi";
+            "sobre-mi sobre-mi";
         grid-template-columns: 1fr 1fr;
     }
-    .seccion-proyectos{
+
+    .seccion-proyectos {
         grid-template-areas:
-        "proyectos";
+            "proyectos";
         grid-template-columns: 1fr 1fr;
     }
-    .seccion-servicios{
+
+    .seccion-servicios {
         grid-template-areas:
-        "servicios servicios";
+            "servicios servicios";
         grid-template-columns: 1fr 1fr;
     }
 }
