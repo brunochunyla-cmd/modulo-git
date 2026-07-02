@@ -242,7 +242,7 @@ section button{
     }
     .seccion-proyectos{
         grid-template-areas:
-        "proyectos proyectos";
+        "proyectos";
         grid-template-columns: 1fr 1fr;
     }
     .seccion-servicios{
